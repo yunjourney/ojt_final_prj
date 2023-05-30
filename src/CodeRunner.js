@@ -11,7 +11,7 @@ function CodeRunner() {
   // const [accordionContents, setAccordionContents] = useState([]);
   const [accordionData, setAccordionData] = useState([]);
 
-  const api_key = "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";
+  const api_key = "";
   const search = () => {
     setLoading(true);
     const messages = [
