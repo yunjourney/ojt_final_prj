@@ -7,8 +7,6 @@ function CodeRunner() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [clickedResults, setClickedResults] = useState([]);
-  // const [accordionTitle, setAccordionTitle] = useState("");
-  // const [accordionContents, setAccordionContents] = useState([]);
   const [accordionData, setAccordionData] = useState([]);
 
   const api_key = "";
@@ -106,7 +104,7 @@ function CodeRunner() {
         <h1 className="text-white">나만의 코드마켓</h1>
         <h2 className="text-white">Code Runner</h2>
         <div className="search-bar">
-          <label htmlFor="keywords">키워드:</label>
+          {/* <label htmlFor="keywords">키워드:</label> */}
           <input
             type="text"
             id="keywords"
@@ -157,7 +155,11 @@ function CodeRunner() {
                     }}
                     onChange={(event) => onChange(event, index)}
                   />
-                  <button key={index} onClick={() => handleClick(item.content)}>
+                  <button
+                    className="run-button"
+                    key={index}
+                    onClick={() => handleClick(item.content)}
+                  >
                     Run
                   </button>
                 </div>
@@ -176,7 +178,7 @@ function CodeRunner() {
               margin: "0 auto",
             }}
           >
-            <h3>Results:</h3>
+            <h3>Results</h3>
             {clickedResults.map((results, index) => (
               <div
                 key={index}

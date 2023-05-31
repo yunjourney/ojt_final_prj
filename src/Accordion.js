@@ -12,14 +12,11 @@ function Accordion({ title, contents }) {
       search: true,
     }));
     setItems(newItems);
-    // setItems((prevItems) => [...prevItems, newItems]);
   }, [title, contents]);
 
   const [activeIndex, setActiveIndex] = useState(null);
 
   const handleToggle = (index) => {
-    // const updatedItems = [...items];
-    // setItems(updatedItems);
     setActiveIndex(index === activeIndex ? null : index);
   };
 
